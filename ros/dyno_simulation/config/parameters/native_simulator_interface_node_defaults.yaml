@@ -1,0 +1,47 @@
+#############################################################################
+#                            _     _     _     _                            #
+#                           / \   / \   / \   / \                           #
+#                          ( D ) ( Y ) ( N ) ( O )                          #
+#                           \_/   \_/   \_/   \_/                           #
+#                                                                           #
+#              DYNO: Ground Vehicle Dynamics Validation Toolkit             #
+#############################################################################
+
+"/**":
+  ros__parameters:
+    options: "ros"
+    rates:
+      controllers: 100.0
+      transforms: 100.0
+      odometry: 100.0
+      imu: 0.0
+      pointcloud: 0.0
+      image: 0.0
+    controllers:
+      speed:
+        gains:
+          proportional: 0.2
+          integral: 0.0001
+          derivative: 0.0
+        setpoint:
+          ramp:
+            enabled: true
+            magnitude: 0.01
+        limit:
+          integral:
+            enabled: true
+            magnitude: 0.8
+      steering:
+        gains:
+          proportional: 1.2
+          integral: 0.05
+          derivative: 0.0
+        setpoint:
+          ramp:
+            enabled: true
+            magnitude: 0.05
+        limit:
+          integral:
+            enabled: false
+            magnitude: 0.3
+    use_sim_time: true

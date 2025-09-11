@@ -1,0 +1,1 @@
+/home/robot/workspace/examples/reliability/split_surface/bin/input_filter.sh

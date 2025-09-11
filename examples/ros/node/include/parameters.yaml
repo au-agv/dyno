@@ -1,0 +1,9 @@
+"/**":
+  ros__parameters:
+    use_sim_time: true
+    options: /home/robot/ROS/data/options.json
+    rates:
+      pointcloud: 1.0
+    sensors:
+      camera: false
+      lidar: true

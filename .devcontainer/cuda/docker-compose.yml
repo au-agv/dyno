@@ -1,0 +1,24 @@
+services:
+  dyno:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              driver: nvidia
+              device_ids: [ nvidia.com/gpu=all ]
+    environment:
+      - DISPLAY=${DISPLAY}
+    image: ghcr.io/aarhus-robotics/dyno:devel-cuda
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+    privileged: true
+    volumes:
+      - ../../:/home/robot/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - data:/home/robot/data
+
+volumes:
+  data:
+    name: dyno_devcontainer_data

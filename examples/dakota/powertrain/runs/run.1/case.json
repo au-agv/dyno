@@ -1,0 +1,41 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy",
+            "transmission": "/home/robot/workspace/examples/design/powertrain/runs/run.1/transmission.json"
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.4,
+            "integralGain": 0.04
+        },
+        "steeringController": {
+            "proportionalGain": 0.07,
+            "integralGain": 0.012
+        }
+    },
+    "scenario": {
+        "timeToMaxThrottle": 3.0,
+        "useGradeRamp": false,
+        "timeToMaxGrade": 0.0,
+        "gradePercentage": 0.0,
+        "sideSlopePercentage": 0.0,
+        "averagingWindow": 3.0,
+        "speedTolerance": 0.2,
+        "terrain": {
+            "type": "rigid",
+            "rigid": {
+                "frictionCoefficient": 0.85
+            }
+        }
+
+    },
+    "visualization": {
+        "enabled": true
+    },
+    "output": {
+        "filename": "case"
+    }
+}

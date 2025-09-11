@@ -1,0 +1,51 @@
+{
+    "terrain": {
+        "type": "rigid",
+        "geometry": {
+            "position": {
+                "x": -100.0,
+                "y": 0.0
+            },
+            "length": 100.0,
+            "width": 2.0
+        },
+        "rigid": {
+            "frictionCoefficient": 0.85
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.4,
+            "integralGain": 0.0,
+            "derivativeGain": 0.0
+        },
+        "steeringController": {
+            "proportionalGain": 1.5,
+            "integralGain": 0.0,
+            "derivativeGain": 0.0,
+            "lookaheadDistance": 5.0
+        }
+    },
+    "scenario": {
+        "targetSpeed": 18.0,
+        "accelerationLength": 100.0,
+        "vehicleWidth": 2.56,
+        "vehicleLength": 2.56,
+        "pathHeight": 0.5,
+        "leftTurn": false,
+        "haltOnFailure": false
+    },
+    "simulation": {
+        "timeStep": 0.001,
+        "endTime": 200.0
+    },
+    "visualization": {
+        "enabled": true
+    },
+    "output": {
+        "path": "./",
+        "filename": "OlavDLC",
+        "addTimestamp": true,
+        "useNameGenerator": true
+    }
+}

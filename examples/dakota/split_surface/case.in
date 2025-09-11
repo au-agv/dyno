@@ -1,0 +1,48 @@
+environment,
+    results_output
+        results_output_file 'case'
+
+method,
+    vector_parameter_study
+        step_vector = 0.0759375
+        num_steps = 1
+
+variables,
+    continuous_design 1
+        descriptors 'speed'
+        lower_bounds +4.16
+        initial_point +4.16
+        upper_bounds +13.88
+
+interface,
+    analysis_drivers 'analysis_driver.sh'
+        input_filter 'input_filter.sh {PARAMETERS}'
+        output_filter 'output_filter.sh {PARAMETERS} {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'bin/case.py'
+                           'bin/analysis_driver.sh'
+                           'bin/input_filter.sh'
+                           'bin/output_filter.sh'
+                           'include/case.tpl.json'
+                replace
+            verbatim
+    asynchronous
+        evaluation_concurrency 1
+
+
+responses
+    response_functions = 3
+    descriptors 'mean_velocity_angular_z' 'max_velocity_angular_z' 'max_roll'
+    no_gradients
+    no_hessians

@@ -1,0 +1,6 @@
+Key,Type,Description
+vehicle,string,The name of the vehicle used in the simulation.
+scenario/id,string,The identifier of the scenario used to collect the data.
+scenario/parameters,dictionary,Dictionary of specific parameters for the given scenario
+scenario/configuration,dictionary,Raw copy of the configuration dictionary
+frequency,double,The sampling frequency for the output data

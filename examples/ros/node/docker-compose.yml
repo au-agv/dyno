@@ -1,0 +1,123 @@
+networks:
+  local:
+    name: dyno_ros
+
+services:
+  dyno:
+    cap_add:
+      - NET_ADMIN
+    container_name: dyno_ros_simulator
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              driver: nvidia
+              device_ids: [ nvidia.com/gpu=all ]
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DOCKER_ROS_PARAMS=/home/robot/ROS/config/parameters/parameters.yaml
+      - DOCKER_ROS_REMAPS=controls/drive:=/drive points:=/mylidar
+    image: ghcr.io/aarhus-robotics/dyno:ros-runtime-stable
+    networks: [ "local" ]
+    runtime: nvidia
+    stdin_open: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    tty: true
+    volumes:
+      - "../../:/home/robot/workspace"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+      - "./include/options.json:/home/robot/ROS/data/options.json:ro"
+      - "./include/parameters.yaml:/home/robot/ROS/config/parameters/parameters.yaml:ro"
+
+  controller:
+    container_name: dyno_ros_controller
+    environment:
+      - "DOCKER_ROS_BUILD=true"
+      - "DOCKER_ROS_EXEC=node"
+      - "DOCKER_ROS_PACKAGE=navi_planning"
+      - "DOCKER_ROS_NODE=navi_planning_dwa_planner_node"
+      #- "DOCKER_ROS_PARAMS=custom.yaml"
+      #- "DOCKER_ROS_CMAKE_ARGS=-DGET_AVT341_DETECTION_MODELS=1"
+    image: aarhus-robotics/navi
+    networks:
+      - local
+    user: "1000:1000"
+    volumes:
+      - build:/home/ros/ROS/build
+      - install:/home/ros/ROS/install
+      - ../:/home/ros/ROS/src/aarhus-robotics/navi
+      #- ./custom.yaml:/home/ros/ROS/config/params/custom.yaml
+      #- ../../:/workspace
+
+  gui:
+    container_name: dyno_ros_gui
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              driver: nvidia
+              device_ids:
+                - nvidia.com/gpu=all
+    runtime: nvidia
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DOCKER_ROS_BUILD=true
+      - DOCKER_ROS_EXEC=node
+      - DOCKER_ROS_PACKAGE=rviz2
+      - DOCKER_ROS_NODE=rviz2
+      #- DOCKER_ROS_PARAMS=/home/robot/ROS/config/parameters/parameters.yaml
+    image: ghcr.io/aarhus-robotics/dyno:ros
+    networks:
+      - local
+    user: "1000:1000"
+    volumes:
+      #- "./include/parameters.yaml:/home/robot/ROS/config/parameters/parameters.yaml:ro"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix"
+
+  bag:
+    cap_add:
+      - NET_ADMIN
+    container_name: dyno_ros_datalogger
+    environment:
+      - "DOCKER_ROS_EXEC=record"
+      - "DOCKER_ROS_BAG_PATH=/home/robot/ROS/bags"
+      - "DOCKER_ROS_BAG_NAME=dyno_bag"
+    image: ghcr.io/aarhus-robotics/dyno:ros
+    networks:
+      - local
+    stdin_open: true
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    tty: true
+    user: 1000:1000
+    volumes:
+      - "./bags:/home/robot/ROS/bags"
+
+  cli:
+    command: /bin/bash
+    container_name: dyno_ros_cli
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - DOCKER_ROS_EXEC=cli
+    image: ghcr.io/aarhus-robotics/dyno:ros
+    networks:
+      - local
+    stdin_open: true
+    tty: true
+    user: "1000:1000"
+    volumes:
+      - install:/home/ros/ROS/install
+
+volumes:
+  build:
+    name:
+      dyno_runtime_build
+  install:
+    name:
+      dyno_runtime_install

@@ -1,0 +1,45 @@
+environment,
+    results_output
+        results_output_file 'results'
+        hdf5
+    write_restart 'case.rst'
+
+method,
+    multidim_parameter_study
+        partitions 5
+
+variables,
+    continuous_design 1
+        descriptors   'speed'
+        lower_bounds  1.0
+        initial_point 1.0
+        upper_bounds  5.0
+
+interface,
+    analysis_drivers 'python3 case.py --driver dyno --scenario obstacleAvoidance --config case.json'
+        fork
+            input_filter 'python3 case.py --input-filter --parameters-file {PARAMETERS} --output-file case.json
+            output_filter 'python3 case.py --output-filter {RESULTS}
+            parameters_file 'parameters.dkt'
+            results_file 'results.dkt'
+            parameters_format
+                json
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'bin/case.py'
+                        'bin/analysis_driver.sh'
+                        'bin/input_filter.sh'
+                        'bin/output_filter.sh'
+                        'include/case.tpl.json'
+                replace
+            verbatim
+    asynchronous
+        evaluation_concurrency 24
+
+responses,
+    response_functions 1
+    descriptors 'end_velocity_linear_x'
+    no_gradients
+    no_hessians

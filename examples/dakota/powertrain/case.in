@@ -1,0 +1,50 @@
+environment,
+    results_output
+        results_output_file 'case'
+        hdf5
+
+method,
+    vector_parameter_study
+        step_vector = 200.0
+        num_steps 10
+
+variables,
+    continuous_design 1
+        descriptors   'shift_point'
+        lower_bounds  1300.0
+        initial_point 1900.0
+        upper_bounds  2800.0
+
+interface,
+    analysis_drivers 'analysis_driver.sh'
+        input_filter 'input_filter.sh {PARAMETERS}'
+        output_filter 'output_filter.sh {PARAMETERS} {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'bin/case.py'
+                           'bin/analysis_driver.sh'
+                           'bin/input_filter.sh'
+                           'bin/output_filter.sh'
+                           'bin/get_cwd.py'
+                           'include/case.tpl.json'
+                           'include/transmission.tpl.json'
+                replace
+            verbatim
+    asynchronous
+        evaluation_concurrency 1
+
+responses,
+    response_functions 1
+    descriptors 'end_velocity_linear_x'
+    no_gradients
+    no_hessians

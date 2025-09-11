@@ -1,0 +1,72 @@
+topics:
+  ###############
+  # CONTROLLERS #
+  ###############
+  # > Drive-by-wire
+  - /olav/drive_by_wire/status
+  - /olav/sensors/steering/angle
+  # > Speed controller
+  - /olav/controllers/speed/speed
+  - /olav/controllers/speed/status
+  # > Steering controller
+  - /olav/controllers/steering/angle
+  - /olav/controllers/steering/status
+  ###########
+  # SENSORS #
+  ###########
+  # > Powertrain interface
+  - /olav/sensors/powertrain/engine/speed
+  - /olav/sensors/powertrain/tachometer/speed
+  # > Inertial navigation system
+  - /olav/sensors/navigation/device/device
+  - /olav/sensors/navigation/antenna/left/coordinates
+  - /olav/sensors/navigation/antenna/left/time
+  - /olav/sensors/navigation/antenna/right/coordinates
+  - /olav/sensors/navigation/imu/data
+  - /olav/sensors/navigation/filter/coordinates
+  - /olav/sensors/navigation/filter/imu
+  - /olav/sensors/navigation/filter/odometry
+  - /olav/sensors/navigation/filter/aiding
+  - /olav/sensors/navigation/rtk/nmea
+  - /olav/sensors/navigation/rtk/rtcm
+  - /olav/sensors/navigation/antenna/left/status/fix
+  - /olav/sensors/navigation/antenna/left/status/sbas
+  - /olav/sensors/navigation/antenna/right/status/fix
+  - /olav/sensors/navigation/antenna/right/status/sbas
+  - /olav/sensors/navigation/status/rtk
+  - /olav/sensors/navigation/filter/status
+  - /olav/sensors/navigation/antenna/dual/status
+  - /olav/sensors/navigation/status/aiding
+  - /olav/sensors/navigation/antenna/dual/offset_correction
+  # > LiDAR
+  - /olav/sensors/lidar/points
+  ####################
+  # MODEL DEFINITION #
+  ####################
+  - /olav/model/description
+  - /olav/model/joints/states
+  - /olav/model/joints/steering
+  ################
+  # SHARED BUSES #
+  ################
+  # > Controls
+  - /olav/controls/throttle
+  - /olav/controls/brake
+  - /olav/controls/steering
+  # > Signals
+  - /olav/signals/estop
+  - /olav/signals/heartbeat
+  - /olav/signals/ready
+  #####################
+  # ROS GLOBAL TOPICS #
+  #####################
+  # > Diagnostics
+  - /diagnostics
+  - /diagnostics_agg
+  - /diagnostics_toplevel_state
+  # > Transforms
+  - /tf
+  - /tf_static
+  # > Parameters and logging
+  - /parameter_events
+  - /rosout

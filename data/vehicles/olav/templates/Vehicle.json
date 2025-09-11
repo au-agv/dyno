@@ -1,0 +1,41 @@
+{
+  "Name": "OLAV",
+  "Type": "Vehicle",
+  "Template": "WheeledVehicle",
+  "Chassis": {
+    "Input File": "Chassis.json"
+  },
+  "Axles": [
+    {
+      "Suspension Input File": "Front_DoubleWishbone.json",
+      "Suspension Location": [ 0.000, 0.000, 0.414 ],
+      "Steering Index": 0,
+      "Left Wheel Input File": "Front_Wheel.json",
+      "Right Wheel Input File": "Front_Wheel.json",
+      "Left Brake Input File": "BrakeShafts.json",
+      "Right Brake Input File": "BrakeShafts.json"
+    },
+    {
+      "Suspension Input File": "Rear_DoubleWishbone.json",
+      "Suspension Location": [ -2.060, 0.000, 0.377 ],
+      "Left Wheel Input File": "Rear_Wheel.json",
+      "Right Wheel Input File": "Rear_Wheel.json",
+      "Left Brake Input File": "BrakeShafts.json",
+      "Right Brake Input File": "BrakeShafts.json",
+      "Antirollbar Input File": "Rear_Antirollbar.json",
+      "Antirollbar Location": [ -2.187, 0.000, 0.734 ]
+    }
+  ],
+  "Wheelbase": 2.057,
+  "Steering Subsystems": [
+    {
+      "Input File": "RackPinion.json",
+      "Location": [ -0.130, 0.090, 0.560 ],
+      "Orientation": [ 1, 0, 0, 0 ]
+    }
+  ],
+  "Driveline": {
+    "Input File": "4WD.json",
+    "Suspension Indexes": [ 0, 1 ]
+  }
+}

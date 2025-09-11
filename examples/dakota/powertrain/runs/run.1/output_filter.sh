@@ -1,0 +1,1 @@
+/home/robot/workspace/examples/design/powertrain/bin/output_filter.sh

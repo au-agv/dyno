@@ -1,0 +1,12 @@
+{
+    "description": "slope test map",
+    "elevation": {
+        "max": 15.62874221801758,
+        "min": 0.6070899859211831e-12
+    },
+    "map_size": {
+        "width": 250.0,
+        "height": 250.0
+    },
+    "friction_coefficient": 0.5
+}

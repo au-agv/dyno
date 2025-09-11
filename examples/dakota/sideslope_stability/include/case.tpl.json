@@ -1,0 +1,49 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "rigid"
+        },
+        "differentialLock": {
+            "front": true,
+            "rear": true,
+            "central": true
+        }
+    },
+    "scenario": {
+        "steering": {
+            "amplitude": 1.0,
+            "frequency": 0.2
+        },
+        "targetSpeed": {speed },
+        "timeToMaxThrottle": 3.0,
+        "useGradeRamp": true,
+        "timeToMaxGrade": 3.0,
+        "gradePercentage": 30.0,
+        "sideSlopePercentage": 0.0,
+        "averagingWindow": 3.0,
+        "speedTolerance": 0.2,
+        "terrain": {
+            "type": "rigid",
+            "rigid": {
+                "frictionCoefficient": 0.9
+            }
+        }
+    },
+    "simulation": {
+        "timeStep": 0.0015,
+        "endTime": 120.0,
+        "contacts": {
+            "method": "nsc"
+        }
+    },
+    "solver": {
+        "maximumIterations": 50
+    },
+    "visualization": {
+        "enabled": true
+    },
+    "output": {
+        "filename": "case"
+    }
+}

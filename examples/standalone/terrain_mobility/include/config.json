@@ -1,0 +1,45 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "rigid"
+        },
+        "differentialLock": {
+            "front": true,
+            "rear": true,
+            "central": true
+        }
+    },
+    "scenario": {
+        //"waypoints": "<this entry is filled by the launch script>",
+        //"terrain": {
+        //    "path": "this entry is filled by the launch script",
+        //    "meta": "this entry is filled by the launch script"
+        //},
+        "frictionCoefficient": 0.85
+    },
+    "simulation": {
+        "timeStep": 5.0e-4,
+        "endTime": 50.0,
+        "contacts": {
+            "method": "nsc"
+        },
+        "realtime": false
+    },
+    "solver": {
+        "maximumIterations": 250
+    },
+    "visualization": {
+        "engine": "vsg",
+        "enabled": true,
+        "gui": {
+            "enabled": true
+        },
+        "fullscreen": false,
+        "fps": 0.1,
+        "windowSize": {
+            "width": 1920,
+            "height": 1080
+        }
+    }
+}

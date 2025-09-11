@@ -1,0 +1,10 @@
+services:
+  dyno:
+    environment:
+      - DISPLAY=${DISPLAY}
+    image: ghcr.io/aarhus-robotics/dyno:devel
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../../:/home/robot/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix

@@ -1,0 +1,57 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy"
+        },
+        "differentialLock": {
+            "front": true,
+            "rear": true,
+            "central": true
+        }
+    },
+    "scenario": {
+        "template": "straightLineAcceleration",
+        "timeToMaxThrottle": 3.0,
+        "useGradeRamp": true,
+        "timeToMaxGrade": 3.0,
+        "gradePercentage": 41.0,
+        "sideSlopePercentage": 0.0,
+        "averagingWindow": 3.0,
+        "speedTolerance": 0.2,
+        "terrain": {
+            "type": "rigid",
+            "rigid": {
+                "frictionCoefficient": 0.3
+            },
+            "scm": {
+                "resolution": 0.025,
+                "bekkerN": 0.9
+            }
+        }
+
+    },
+    "simulation": {
+        "timeStep": 0.0015,
+        "endTime": 120.0,
+        "contacts": {
+            "method": "nsc"
+        }
+    },
+    "solver": {
+        "maximumIterations": 50
+
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "vsg",
+        "light": 0.12,
+        "skybox": true,
+        "shadows": false,
+        "gui": { "enabled": true },
+        "fps": 120
+    },
+    "output": {
+        "path": "./",
+        "filename": "straight_line_acceleration" }
+}

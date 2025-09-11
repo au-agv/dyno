@@ -1,0 +1,26 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "steering": {
+            "amplitude": 1.0,
+            "frequency": 0.2
+        },
+        "timeToMaxGrade": 10.0,
+        "gradePercentage": 5.0,
+        "terrain": {
+            "rigid": {
+                "frictionCoefficient": 0.4
+            }
+        },
+        "targetSpeed": 5.0,
+        "useGradeRamp": true
+    },
+    "visualization": {
+        "enabled": true,
+        "gui": {
+            "enabled": true
+        }
+    }
+}

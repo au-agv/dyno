@@ -1,0 +1,110 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "initialPosition": {
+            "x": -82.5
+        }
+    },
+    "terrain": {
+        "type": "rigid",
+        "rigid": {
+            "patches": [
+                {
+                    "material": {
+                        "frictionCoefficient": 0.85
+                    },
+                    "position": {
+                        "x": -45.0,
+                        "y": 0.0
+                    },
+                    "size": {
+                        "length": 90.0,
+                        "width": 40.0
+                    },
+                    "visualization": {
+                        "texture": {
+                            "path": "textures/terrain/asphalt.jpg",
+                            "scale": {
+                                "x": 10.0,
+                                "y": 10.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "material": {
+                        "frictionCoefficient": 0.20
+                    },
+                    "position": {
+                        "x": 25.0,
+                        "y": -10.0
+                    },
+                    "size": {
+                        "length": 50.0,
+                        "width": 20.0
+                    },
+                    "visualization": {
+                        "texture": {
+                            "path": "textures/terrain/snow.jpg",
+                            "scale": {
+                                "x": 10.0,
+                                "y": 10.0
+                            }
+                        }
+                    }
+                },
+                {
+                    "material": {
+                        "frictionCoefficient": 0.85
+                    },
+                    "position": {
+                        "x": 25.0,
+                        "y": 10.0
+                    },
+                    "size": {
+                        "length": 50.0,
+                        "width": 20.0
+                    },
+                    "visualization": {
+                        "texture": {
+                            "path": "textures/terrain/asphalt.jpg",
+                            "scale": {
+                                "x": 10.0,
+                                "y": 10.0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.4,
+            "integralGain": 0.04
+        },
+        "steeringController": {
+            "proportionalGain": 0.07,
+            "integralGain": 0.012
+        }
+    },
+    "scenario": {
+        "brakeStart": 0.0,
+        "brakeEffort": 1.0,
+        "targetSpeed": 4.16
+    },
+    "simulation": {
+        "timeStep": 0.0005,
+        "endTime": 50.0
+    },
+    "visualization": {
+        "enabled": true
+    },
+    "output": {
+        "path": "./",
+        "filename": "results",
+        "addTimestamp": false,
+        "useNameGenerator": false,
+        "triggerPosition": -10.0
+    }
+}

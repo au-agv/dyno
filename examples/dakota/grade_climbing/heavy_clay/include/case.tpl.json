@@ -1,0 +1,43 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "rigid"
+        },
+        "differentialLock": {
+            "front": false,
+            "rear": false,
+            "central": false
+        }
+    },
+    "scenario": {
+        "timeToMaxThrottle": 3.0,
+        "gradePercentage": {slope},
+        "useGradeRamp": true,
+        "timeToMaxGrade": 3.0,
+        "terrain": {
+            "type": "scm",
+            "scm": {
+                "resolution": 0.1,
+                "bekkerKphi": 103.0e3,
+                "bekkerKc": 1.84e3,
+                "bekkerN": 0.11,
+                "mohrCohesion": 20.7e3,
+                "mohrFriction": 6.0,
+                "janosiShear": 0.016
+            },
+            "length": 1.0e3,
+            "width": 3.0
+        }
+
+    },
+    "simulation": {
+        "endTime": 30.0
+    },
+    "visualization": {
+        "enabled": true
+    },
+    "output": {
+        "filename": "case"
+    }
+}

@@ -1,0 +1,24 @@
+networks:
+  ros:
+    name: ros
+    external: true
+
+services:
+  dyno:
+    command: /bin/bash
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
+              driver: nvidia
+              device_ids: [ nvidia.com/gpu=all ]
+    environment:
+      - DISPLAY=${DISPLAY}
+    image: ghcr.io/aarhus-robotics/dyno:ros-devel
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../../ros:/home/robot/ROS/src/aarhus-robotics
+      - /tmp/.X11-unix:/tmp/.X11-unix

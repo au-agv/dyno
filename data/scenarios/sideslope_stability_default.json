@@ -1,0 +1,37 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.18,
+            "integralGain": 0.015
+        },
+        "steeringController": {
+            "proportionalGain": 0.15,
+            "integralGain": 0.025
+        }
+    },
+
+    "scenario": {
+        "obstacle": {
+            "position": { "x": 25.0, "y": 25.0 },
+            "size": { "x": 5.0, "y": 5.0 },
+            "offset": { "x": 5.0, "y": 0.0 }
+        },
+        "accelerationLength": 100.0,
+        "targetSpeed": 5.0,
+        "terrain": {
+            "rigid": {
+                "frictionCoefficient": 0.8
+            }
+        }
+    },
+    "visualization": {
+        "enabled": true,
+        "gui": {
+            "enabled": true
+        }
+    }
+}

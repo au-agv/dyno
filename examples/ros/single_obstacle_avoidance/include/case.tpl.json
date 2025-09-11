@@ -1,0 +1,20 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "obstacle": {
+            "position": [ 25.0, 25.0, 0.0 ],
+            "size": [ 5.0, 5.0, 2.0 ]
+        }
+    },
+    "simulation": {
+        "endTime": 5.0
+    },
+    "visualization": {
+        "enabled": true,
+        "gui": {
+            "enabled": true
+        }
+    }
+}

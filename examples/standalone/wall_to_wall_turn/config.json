@@ -1,0 +1,19 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "template": "wallToWallTurn",
+        "targetSpeed": 1.0,
+        "targetSteering": 1.0,
+        "headingTolerance": 0.01,
+        "triggerPosition": 10.0,
+        "leftTurn": false
+    },
+    "simulation": {
+        "realtime": true
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

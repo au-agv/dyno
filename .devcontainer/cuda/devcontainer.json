@@ -1,0 +1,37 @@
+{
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "cheshirekow.cmake-format",
+                "cschlosser.doxdocgen",
+                "DavidAnson.vscode-markdownlint",
+                "dnut.rewrap-revived",
+                "Gruntfuggly.todo-tree",
+                "IBM.output-colorizer",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "cmake.buildBeforeRun": true,
+                "cmake.configureOnOpen": false,
+                "editor.rulers": [
+                    80,
+                    120
+                ],
+                "latex-workshop.view.pdf.invertMode.enabled": "auto",
+                "latex-workshop.latex.outDir": "%DIR%/../build",
+                "latex-workshop.view.pdf.viewer": "tab",
+                "rewrap.wholeComments": false,
+                "rewrap.wrappingColumn": 80
+            }
+        }
+    },
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "dyno",
+    "workspaceFolder": "/home/robot/workspace"
+}

@@ -1,0 +1,1 @@
+/home/robot/workspace/examples/design/powertrain/bin/get_cwd.py

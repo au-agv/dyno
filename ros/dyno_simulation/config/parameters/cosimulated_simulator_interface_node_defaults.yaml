@@ -1,0 +1,21 @@
+ #############################################################################
+ #                            _     _     _     _                            #
+ #                           / \   / \   / \   / \                           #
+ #                          ( D ) ( Y ) ( N ) ( O )                          #
+ #                           \_/   \_/   \_/   \_/                           #
+ #                                                                           #
+ #              DYNO: Ground Vehicle Dynamics Validation Toolkit             #
+ #############################################################################
+
+"/**":
+  dyno:
+    simulator:
+      "**":
+        ros__parameters:
+          use_sim_time: true
+          communication:
+            protocol: "tcp"
+            address: "127.0.0.1"
+            port: 5555
+          cosimulation:
+            rate: 1000.0

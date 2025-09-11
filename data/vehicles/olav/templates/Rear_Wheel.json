@@ -1,0 +1,15 @@
+{
+    "Name": "OLAV Wheel",
+    "Type": "Wheel",
+    "Template": "Wheel",
+  
+    "Mass": 18.8,
+    "Inertia": [ 0.113, 0.113, 0.113 ],
+  
+    "Visualization": {
+      "Mesh Filename": "../meshes/Rear_Wheel.obj",
+      "Radius": 0.268,
+      "Width": 0.275172
+    }
+  }
+  

@@ -1,0 +1,13 @@
+"**/":
+  native_simulator_interface:
+    ros__parameters:
+      options: "{ workdir }/case.json"
+  dynamic_window_approach_planner:
+    ros__parameters:
+      planner:
+        rate: { rate }
+        objective:
+          goal:
+            initial:
+              position_x: 50.0
+              position_y: 50.0

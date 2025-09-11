@@ -1,0 +1,28 @@
+{
+    "analysis_components": [],
+    "derivative_variables": [
+        1
+    ],
+    "eval_id": "1",
+    "metadata": [],
+    "responses": [
+        {
+            "active_set": 1,
+            "label": "mean_velocity_angular_z"
+        },
+        {
+            "active_set": 1,
+            "label": "max_velocity_angular_z"
+        },
+        {
+            "active_set": 1,
+            "label": "max_roll"
+        }
+    ],
+    "variables": [
+        {
+            "label": "speed",
+            "value": 4.16
+        }
+    ]
+}
