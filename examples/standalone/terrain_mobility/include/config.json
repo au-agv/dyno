@@ -1,0 +1,28 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "differentialLock": {
+            "front": true,
+            "rear": true,
+            "central": true
+        }
+    },
+    "scenario": {
+        "waypoints": "/home/robot/workspace/examples/standalone/terrain_mobility/data/paths/path-0/path.json",
+        "terrain": {
+            "path": "/home/robot/workspace/examples/standalone/terrain_mobility/data/map/map-elevation-0.bmp",
+            "meta": "/home/robot/workspace/examples/standalone/terrain_mobility/data/map/map-meta-0.json"
+        },
+        "frictionCoefficient": 0.85
+    },
+    "simulation": {
+        "timeStep": 5.0e-4,
+        "endTime": 50.0,
+        "realtime": false
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "irrlicht",
+        "fps": 60
+    }
+}

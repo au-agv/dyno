@@ -1,0 +1,14 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "minimumTimeToInitialSpeed": 5.0,
+        "timeToMaxGrade": 10.0,
+        "targetInitialSpeed": 25.0,
+        "targetGrade": 15.0
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

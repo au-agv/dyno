@@ -1,0 +1,18 @@
+{
+    "scenario": {
+        "headingTolerance": 0.01,
+        "leftTurn": false,
+        "targetSpeed": 1.0,
+        "targetSteering": 1.0,
+        "triggerPosition": 10.0
+    },
+    "simulation": {
+        "realtime": true
+    },
+    "vehicle": {
+        "name": "olav"
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

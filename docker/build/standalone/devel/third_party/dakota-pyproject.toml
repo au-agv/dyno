@@ -1,0 +1,8 @@
+[tool.poetry]
+name = "dakota"
+version = "6.21.0"
+description = "The Dakota toolkit provides a flexible, extensible interface between analysis codes and iterative systems analysis methods."
+authors = ["DAKOTA team <akota@sandia.gov >"]
+
+[tool.poetry.dependencies]
+python = "^3.10"

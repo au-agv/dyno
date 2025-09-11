@@ -1,0 +1,30 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "template": "doubleLaneChange",
+        "targetSpeed": {speed},
+        "accelerationLength": 50.0,
+        "vehicleWidth": 2.56,
+        "vehicleLength": 2.56,
+        "pathHeight": 0.5,
+        "leftTurn": false,
+        "haltOnFailure": false,
+        "terrain": {
+            "type": "rigid",
+            "frictionCoefficient": {
+                "left": {friction_coefficient},
+                "right": {friction_coefficient}
+            }
+        },
+        "sideslope": {sideslope}
+    },
+    "simulation": {
+        "timeStep": 0.001,
+        "endTime": 100.0
+    },
+    "visualization": {
+        "enabled": false
+    }
+}

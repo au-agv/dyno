@@ -1,0 +1,13 @@
+{
+    "Name": "OLAV Automatic Transmission Simple CVT",
+    "Type": "Transmission",
+    "Template": "AutomaticTransmissionSimpleCVT",
+  
+    "Gear Box": {
+      "Efficiency": 0.96,
+      "Minimum Gear Ratio": 0.05,
+      "Maximum Gear Ratio": 0.87,
+      "Driveshaft Speed Begin": 6.28,
+      "Driveshaft Speed End": 733.04
+    }
+  }

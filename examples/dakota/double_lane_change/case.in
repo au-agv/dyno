@@ -1,0 +1,62 @@
+environment,
+    method_pointer = "METHOD_UNCERTAINTY_QUANTIFICATION_DEFAULT"
+    results_output
+        results_output_file 'results/double_lane_change'
+        hdf5
+
+method,
+    id_method = "METHOD_UNCERTAINTY_QUANTIFICATION_DEFAULT"
+    model_pointer = "MODEL_DYNO_DOUBLE_LANE_CHANGE_DEFAULT"
+    sampling
+        sample_type = lhs
+        samples = 100
+        seed = 1
+    output verbose
+
+model,
+    id_model = "MODEL_DYNO_DOUBLE_LANE_CHANGE_DEFAULT"
+    single
+        interface_pointer = "INTERFACE_DYNO_DEFAULT"
+
+variables,
+    id_variables = "VARIABLES_DOUBLE_LANE_CHANGE_DEFAULT"
+    uniform_uncertain 3
+        descriptors  = 'sideslope' 'friction_coefficient' 'speed'
+        lower_bounds = 0.0        0.1                     5.0
+        upper_bounds = 12.0       0.9                     10.0
+
+interface,
+    id_interface = 'INTERFACE_DYNO_DEFAULT'
+    analysis_drivers 'dynokota analysis_driver doubleLaneChange configuration.json'
+        input_filter 'dynokota input_filter configuration.tpl.json {PARAMETERS}'
+        output_filter 'dynokota output_filter {PARAMETERS} {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'include/configuration.tpl.json'
+                replace
+            verbatim
+            failure_capture
+                recover 0
+    asynchronous
+        evaluation_concurrency 1
+                               #24
+
+responses,
+    response_functions 5
+    descriptors 'velocity.angular.z:max'
+                'pose.position.y:absmax'
+                'pose.rotation.x:max'
+                'commands.steering:mean'
+                'acceleration.linear.y:butter^0.1:absmax'
+    no_gradients
+    no_hessians

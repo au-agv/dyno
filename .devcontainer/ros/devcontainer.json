@@ -1,0 +1,35 @@
+{
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "cheshirekow.cmake-format",
+                "cschlosser.doxdocgen",
+                "DavidAnson.vscode-markdownlint",
+                "dnut.rewrap-revived",
+                "Gruntfuggly.todo-tree",
+                "IBM.output-colorizer",
+                "ms-vscode.cpptools",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "njpwerner.autodocstring",
+                "Ranch-Hand-Robotics.rde-ros-2",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                "editor.rulers": [
+                    80,
+                    120
+                ],
+                "rewrap.wholeComments": false,
+                "rewrap.wrappingColumn": 80
+            }
+        }
+    },
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "dyno",
+    "workspaceFolder": "/home/robot/workspace"
+    // (Optional) Explicit ROS workspace mount
+    //"workspaceFolder": "/home/robot/ROS/src/aarhus-robotics"
+}

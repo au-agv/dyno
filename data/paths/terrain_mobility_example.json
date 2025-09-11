@@ -1,0 +1,977 @@
+{
+    "waypoints": [
+        {
+            "map": {
+                "x": 57.5,
+                "y": 7.5
+            },
+            "elevation": 7.294125464285606,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": -0.014290121383965015,
+                    "side": -8.361039161682129
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 0.2210878903304747,
+                "total_length": 5.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 36
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 7.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 12.5
+            },
+            "elevation": 7.218899661537135,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": -0.022171247750520706,
+                    "side": -14.120450973510742
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 0.4421757806609494,
+                "total_length": 10.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 35
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 12.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 17.5
+            },
+            "elevation": 7.106252503588095,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": -0.022440357133746147,
+                    "side": -21.893970489501953
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 0.6632636709914241,
+                "total_length": 15.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 34
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 17.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 22.5
+            },
+            "elevation": 7.0413064716027,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": -0.014143652282655239,
+                    "side": -27.031269073486328
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 0.8843515613218988,
+                "total_length": 20.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 33
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 22.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 27.5
+            },
+            "elevation": 7.028823959590906,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": -0.004999850410968065,
+                    "side": -28.753860473632812
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 1.1054394516523736,
+                "total_length": 25.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 32
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 27.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 32.5
+            },
+            "elevation": 7.02818834771711,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.009593380615115166,
+                    "side": -29.040632247924805
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 1.3265273419828483,
+                "total_length": 30.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 31
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 32.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 37.5
+            },
+            "elevation": 7.028294744373784,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.14573392271995544,
+                    "side": -29.050949096679688
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 1.547615232313323,
+                "total_length": 35.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 30
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 37.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 42.5
+            },
+            "elevation": 7.035615011747002,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.9040519595146179,
+                    "side": -28.909555435180664
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 1.7687031226437977,
+                "total_length": 40.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 29
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 42.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 47.5
+            },
+            "elevation": 7.144168202851128,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 2.9708542823791504,
+                    "side": -28.091005325317383
+                },
+                "speed": 9.859918594360352,
+                "transverse_times": 0.5071035782039708,
+                "total_time": 2.2758067008477685,
+                "total_length": 45.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 28
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 47.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 52.5
+            },
+            "elevation": 7.597116912055128,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 5.825749397277832,
+                    "side": -25.661235809326172
+                },
+                "speed": 5.522947311401367,
+                "transverse_times": 0.9053137243728879,
+                "total_time": 3.1811204252206564,
+                "total_length": 50.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 27
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 52.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 57.5
+            },
+            "elevation": 8.350946553425876,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 7.8653035163879395,
+                    "side": -21.42032814025879
+                },
+                "speed": 2.594404458999634,
+                "transverse_times": 1.9272245630998994,
+                "total_time": 5.108344988320556,
+                "total_length": 55.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 26
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 57.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 62.5
+            },
+            "elevation": 9.171806180450814,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 8.599374771118164,
+                    "side": -16.115013122558594
+                },
+                "speed": 2.0977210998535156,
+                "transverse_times": 2.383538974913849,
+                "total_time": 7.491883963234405,
+                "total_length": 60.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 25
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 62.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 67.5
+            },
+            "elevation": 9.996132297410425,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 8.612756729125977,
+                    "side": -10.356388092041016
+                },
+                "speed": 2.0944507122039795,
+                "transverse_times": 2.387260760478114,
+                "total_time": 9.87914472371252,
+                "total_length": 65.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 24
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 67.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 72.5
+            },
+            "elevation": 10.814425220298888,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 7.929509162902832,
+                    "side": -4.51889181137085
+                },
+                "speed": 2.4904091358184814,
+                "transverse_times": 2.007702239799539,
+                "total_time": 11.886846963512058,
+                "total_length": 70.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 23
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 72.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 77.5
+            },
+            "elevation": 11.540911257527936,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 5.958706855773926,
+                    "side": 0.5928232073783875
+                },
+                "speed": 5.355413913726807,
+                "transverse_times": 0.9336346509434458,
+                "total_time": 12.820481614455504,
+                "total_length": 75.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 22
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 77.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 82.5
+            },
+            "elevation": 11.93273969038807,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 3.1071808338165283,
+                    "side": 3.7570011615753174
+                },
+                "speed": 9.570280075073242,
+                "transverse_times": 0.5224507496936274,
+                "total_time": 13.342932364149132,
+                "total_length": 80.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 21
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 82.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 87.5
+            },
+            "elevation": 12.011764846098897,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.973568856716156,
+                    "side": 4.885368347167969
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 13.564020254479606,
+                "total_length": 85.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 20
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 87.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 92.5
+            },
+            "elevation": 12.016084629782245,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.1807975322008133,
+                    "side": 5.089727878570557
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 13.785108144810081,
+                "total_length": 90.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 19
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 92.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 97.5
+            },
+            "elevation": 12.016317763535737,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.2636759281158447,
+                    "side": 5.100674629211426
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 14.006196035140556,
+                "total_length": 95.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 18
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 97.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 102.5
+            },
+            "elevation": 12.027910466108859,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 1.5581963062286377,
+                    "side": 5.030860900878906
+                },
+                "speed": 14.906224250793457,
+                "transverse_times": 0.3354303488178001,
+                "total_time": 14.341626383958356,
+                "total_length": 100.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 17
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 102.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 107.5
+            },
+            "elevation": 12.199817799687375,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 5.1114888191223145,
+                    "side": 4.629075050354004
+                },
+                "speed": 6.17703104019165,
+                "transverse_times": 0.8094503601271961,
+                "total_time": 15.151076744085552,
+                "total_length": 105.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 16
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 107.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 112.5
+            },
+            "elevation": 12.917117807376364,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 9.974119186401367,
+                    "side": 3.468686819076538
+                },
+                "speed": 1.5523563623428345,
+                "transverse_times": 3.220909915590478,
+                "total_time": 18.37198665967603,
+                "total_length": 110.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 15
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 112.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 117.5
+            },
+            "elevation": 14.110899788788053,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 13.393181800842285,
+                    "side": 1.544739842414856
+                },
+                "speed": 0.9584077000617981,
+                "transverse_times": 5.216986465861658,
+                "total_time": 23.588973125537688,
+                "total_length": 115.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 14
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 117.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 122.5
+            },
+            "elevation": 15.410831999239225,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 14.609197616577148,
+                    "side": -0.7164058089256287
+                },
+                "speed": 0.5551263689994812,
+                "transverse_times": 9.006958197665211,
+                "total_time": 32.5959313232029,
+                "total_length": 120.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 13
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 122.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 127.5
+            },
+            "elevation": 16.716253822987152,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 14.6312894821167,
+                    "side": -3.03608775138855
+                },
+                "speed": 0.552277684211731,
+                "transverse_times": 9.0534166831972,
+                "total_time": 41.649348006400096,
+                "total_length": 125.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 12
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 127.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 132.5
+            },
+            "elevation": 18.01212134165443,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 13.499872207641602,
+                    "side": -5.292569160461426
+                },
+                "speed": 0.9403968453407288,
+                "transverse_times": 5.316904267355744,
+                "total_time": 46.96625227375584,
+                "total_length": 130.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 11
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 132.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 137.5
+            },
+            "elevation": 19.16260136180089,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 10.198617935180664,
+                    "side": -7.224327087402344
+                },
+                "speed": 1.4732975959777832,
+                "transverse_times": 3.393747477529583,
+                "total_time": 50.35999975128542,
+                "total_length": 135.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 10
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 137.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 142.5
+            },
+            "elevation": 19.78310989221978,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 5.345168113708496,
+                    "side": -8.411993026733398
+                },
+                "speed": 5.9763007164001465,
+                "transverse_times": 0.8366379533544915,
+                "total_time": 51.19663770463991,
+                "total_length": 140.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 9
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 142.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 147.5
+            },
+            "elevation": 19.908255948277226,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 1.6768189668655396,
+                    "side": -8.835515975952148
+                },
+                "speed": 14.320464134216309,
+                "transverse_times": 0.34915069463798676,
+                "total_time": 51.545788399277896,
+                "total_length": 145.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 8
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 147.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 152.5
+            },
+            "elevation": 19.915095964573986,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.2800670862197876,
+                    "side": -8.912165641784668
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 51.76687628960837,
+                "total_length": 150.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 7
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 152.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 157.5
+            },
+            "elevation": 19.91518459197333,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.021600397303700447,
+                    "side": -8.911768913269043
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 51.98796417993884,
+                "total_length": 155.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 6
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 157.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 162.5
+            },
+            "elevation": 19.91549257933419,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.0019683088175952435,
+                    "side": -8.819371223449707
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 52.209052070269315,
+                "total_length": 160.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 5
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 162.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 167.5
+            },
+            "elevation": 19.920380052725285,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.003852834226563573,
+                    "side": -8.251940727233887
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 52.43013996059979,
+                "total_length": 165.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 4
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 167.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 172.5
+            },
+            "elevation": 19.941622255329417,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.006257060449570417,
+                    "side": -6.5872392654418945
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 52.65122785093026,
+                "total_length": 170.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 3
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 172.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 177.5
+            },
+            "elevation": 19.973431463553425,
+            "path": {
+                "move_direction": 1.5707963267948966,
+                "move_compass_direction": "N",
+                "slope": {
+                    "forward": 0.006332344375550747,
+                    "side": -4.177070140838623
+                },
+                "speed": 22.615440368652344,
+                "transverse_times": 0.2210878903304747,
+                "total_time": 52.872315741260735,
+                "total_length": 175.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 2
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 177.5
+            }
+        },
+        {
+            "map": {
+                "x": 57.5,
+                "y": 182.5
+            },
+            "elevation": 19.991770855624956,
+            "path": {
+                "move_direction": 0.0,
+                "move_compass_direction": "N/A",
+                "slope": {
+                    "forward": 0.0,
+                    "side": 0.0
+                },
+                "speed": 0.0,
+                "transverse_times": 0.0,
+                "total_time": 52.872315741260735,
+                "total_length": 175.0
+            },
+            "indices": {
+                "x": 11,
+                "y": 1
+            },
+            "UTM": {
+                "x": 57.5,
+                "y": 182.5
+            }
+        }
+    ],
+    "direction": "N"
+}

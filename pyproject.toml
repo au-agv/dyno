@@ -1,0 +1,87 @@
+#############################################################################
+#                            _     _     _     _                            #
+#                           / \   / \   / \   / \                           #
+#                          ( D ) ( Y ) ( N ) ( O )                          #
+#                           \_/   \_/   \_/   \_/                           #
+#                                                                           #
+#              DYNO: Ground Vehicle Dynamics Validation Toolkit             #
+#############################################################################
+
+# ---------------------------------------------------------------------------- #
+# Build system settings
+# ---------------------------------------------------------------------------- #
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# ---------------------------------------------------------------------------- #
+# Main package settings
+# ---------------------------------------------------------------------------- #
+[project]
+name = "pydyno"
+version = "1.0.0"
+description = "Ground Vehicle Dynamics Validation Toolkit"
+authors = [{name = "Dario Sirangelo", email = "dsi@aarhusrobotics.com"}]
+readme = "README.md"
+include = [{ path = "pydyno/data", format = ["sdist", "wheel"]}]
+
+# ---------------------------------------------------------------------------- #
+# Scripts available on PATH
+# ---------------------------------------------------------------------------- #
+[project.scripts]
+dynolaunch = 'pydyno.scripts.dynolaunch:main'
+dynokota = 'pydyno.scripts.dynokota:main'
+dynopost = 'pydyno.scripts.dynopost:main'
+
+# ---------------------------------------------------------------------------- #
+# Main package dependencies
+# ---------------------------------------------------------------------------- #
+[tool.poetry.dependencies]
+coloredlogs = ">=15.0.1"
+matplotlib = ">=3.8.2"
+numpy = ">=1.14.5"
+python = "^3.10"
+pandas = ">=2.2.0"
+rosbags = ">=0.10.7"
+scipy = ">=1.14.1"
+seaborn = ">=0.13.2"
+tables = "<=3.10.1"
+
+# ---------------------------------------------------------------------------- #
+# (Optional) Dakota dependencies group
+# ---------------------------------------------------------------------------- #
+#
+# These entries are commented out as they might not be available on the target
+# system, but Poetry still requires them to validate the package even when the
+# dependency is not marked for installation. If the Dakota Python bindings are
+# available for your system at their default location (or a custom location
+# provided below), uncomment the following lines to include them as part of the
+# virtual environment.
+#
+#[tool.poetry.group.dakota] optional = true
+
+#[tool.poetry.group.dakota.dependencies.dakota]
+#path = "/usr/local/share/dakota/Python/dakota"
+#optional = true
+
+# ---------------------------------------------------------------------------- #
+# (Optional) Documentation dependencies group
+# ---------------------------------------------------------------------------- #
+
+[tool.poetry.group.documentation]
+optional = true
+
+[tool.poetry.group.documentation.dependencies]
+breathe = ">=4.36.0"
+myst-parser = ">=4.0.1"
+pydata-sphinx-theme = ">=0.16.1"
+sphinx = ">=8.1.3"
+
+# ---------------------------------------------------------------------------- #
+# (Optional) Development dependencies group
+# ---------------------------------------------------------------------------- #
+
+[tool.poetry.group.dev.dependencies]
+deptry = ">=0.24.0"
+poetry-relax = ">=1.1.0"
+snakeviz = ">=2.2.2"

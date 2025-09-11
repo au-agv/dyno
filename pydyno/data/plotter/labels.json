@@ -1,0 +1,50 @@
+{
+    "plots": [
+        {
+            "x": "time",
+            "y": "acceleration/linear/x",
+            "title": "Longitudinal acceleration (X)"
+        },
+        {
+            "x": "time",
+            "y": "velocity/linear/x",
+            "title": "Longitudinal velocity (X)"
+        },
+        {
+            "x": "time",
+            "y": "velocity/linear/y",
+            "title": "Lateral velocity (Y)"
+        },
+        {
+            "x": "time",
+            "y": "velocity/linear/z",
+            "title": "Vertical velocity (Z)"
+        }
+    ],
+    "timeSeries": {
+        "time": {
+            "label": "Time"
+        },
+        "acceleration/linear/x": {
+            "label": "Acceleration"
+        },
+        "velocity/linear/x": {
+            "label": "Velocity"
+        },
+        "velocity/linear/y": {
+            "label": "Velocity"
+        },
+        "velocity/linear/z": {
+            "label": "Velocity"
+        },
+        "velocity/angular/x": {
+            "label": "Angular velocity"
+        },
+        "velocity/angular/y": {
+            "label": "Angular velocity"
+        },
+        "velocity/angular/z": {
+            "label": "Angular velocity"
+        }
+    }
+}

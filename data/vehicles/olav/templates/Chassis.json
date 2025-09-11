@@ -1,0 +1,28 @@
+{
+  "Name": "OLAV Chassis",
+  "Type": "Chassis",
+  "Template": "RigidChassis",
+
+  "Components": [
+    {
+      "Centroidal Frame": {
+        "Location": [ -1.256, -0.038, 0.95 ],
+        "Orientation": [ 1, 0, 0, 0 ]
+      },
+      "Mass": 961.8,
+      "Moments of Inertia": [ 758.87 , 622.42, 586.70284938 ],
+      "Products of Inertia": [ 0.000000000, 0.000000000, 0.000000000 ],
+      "Void": false
+    }
+
+  ],
+
+  "Driver Position": {
+    "Location": [ -0.150, 0.365, 1.525],
+    "Orientation": [ 1, 0, 0, 0 ]
+  },
+
+  "Visualization": {
+    "Mesh": "../meshes/Chassis.obj"
+  }
+}

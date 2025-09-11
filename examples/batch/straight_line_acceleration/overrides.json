@@ -1,0 +1,12 @@
+{
+    "targetSpeed": {
+        "min": 5.0,
+        "max": 10.0,
+        "step": 1.0
+    },
+    "targetSlope": {
+        "min": 0.0,
+        "max": 30.0,
+        "step": 1.0
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "output": {
+        "triggerPosition": -10.0
+    },
+    "scenario": {
+        "accelerationLength": 100.0,
+        "brakeEffort": 1.0,
+        "brakeStart": 0.0,
+        "targetSpeed": 25.0,
+        "terrain": {
+            "friction": {
+                "left": 0.1,
+                "right": 0.6
+            }
+        }
+    },
+    "terrain": {
+        "type": "rigid"
+    },
+    "vehicle": {
+        "name": "genericWheeled",
+        "type": "chrono",
+        "path": "Polaris",
+        "system": {
+            "vehicle": "Polaris.json",
+            "engine": "Polaris_EngineSimpleMap.json",
+            "transmission": "Polaris_AutomaticTransmissionSimpleMap.json",
+            "frontTires": "Polaris_TMeasyTire.json",
+            "rearTires": "Polaris_TMeasyTire.json"
+        },
+        "drag": {
+            "dragCoefficient": 0.69,
+            "referenceArea": 2.3
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 2.1,
+            "integralGain": 0.001,
+            "derivativeGain": 0.0
+        },
+        "steeringController": {
+            "proportionalGain": 1.0,
+            "integralGain": 0.1,
+            "derivativeGain": 0.01,
+            "lookaheadDistance": 1.0
+        }
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "vsg"
+    }
+}

@@ -1,0 +1,27 @@
+.bd-page-width {
+    max-width: 80%;
+}
+
+.bd-main .bd-content .bd-article-container {
+    max-width: 100%;
+}
+
+.bd-sidebar-primary {
+    width: 18%;
+}
+
+.bd-sidebar-secondary {
+    width: 25%;
+}
+
+.navbar {
+    background-color: #1c3052 !important;
+}
+
+html[data-theme="dark"] img {
+    filter: none;
+}
+
+html[data-theme="dark"] .bd-content img:not(.only-dark):not(.dark-light) {
+    background: unset;
+}

@@ -1,0 +1,43 @@
+{
+    "log": {
+        "level": "warn"
+    },
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy"
+        },
+        "differentialLock": {
+            "front": true,
+            "rear": true,
+            "central": true
+        }
+    },
+    "scenario": {
+        "timeToMaxThrottle": 20.0,
+        "gradePercentage": {grade_percentage},
+        "useGradeRamp": true,
+        "timeToMaxGrade": 40.0,
+        "terrain": {
+            "type": "rigid",
+            "rigid": {
+                "frictionCoefficient": {friction_coefficient},
+                "restitutionCoefficient": 0.65,
+                "elasticModulus": 2.5e7,
+                "poissonsRatio": 0.3
+            },
+            "length": 1.0e3,
+            "width": 3.0
+        }
+
+    },
+    "simulation": {
+        "endTime": 500.0
+    },
+    "visualization": {
+        "enabled": false
+    },
+    "output": {
+        "filename": "database"
+    }
+}

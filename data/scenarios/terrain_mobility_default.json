@@ -1,0 +1,34 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy"
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.04,
+            "integralGain": 0.04
+        },
+        "steeringController": {
+            "proportionalGain": 0.35,
+            "integralGain": 0.0075
+        }
+    },
+    "scenario": {
+        "template": "terrainMobility",
+        "waypoints": "waypoints.json",
+        "terrain": {
+            "path": "map/map-slope-analysis-0.bmp",
+            "meta": "map/map-slope-analysis-0.json"
+        },
+        "frictionCoefficient": 0.85
+    },
+    "simulation": {
+        "timeStep": 0.001,
+        "endTime": 30.0
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

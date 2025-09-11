@@ -1,0 +1,31 @@
+{
+    "scenario": {
+        "haltOnCollision": false,
+        "obstacles": {
+            "enabled": true,
+            "mode": "staggered",
+            "adjustHeight": true,
+            "minimumDistance": 12.0,
+            "positions": [],
+            "radius": {"maximum": 5.0, "minimum": 0.5},
+            "sizes": []
+        },
+        "path": {
+            "accelerationLength": 50.0,
+            "waypoints": [
+                [  50, 0, 0],
+                [  60, 0, 0],
+                [-100, 0, 0],
+                [ 150, 0, 0],
+                [ 500, 0, 0]
+            ],
+            "waypointsIntegrationStep": 2.5
+        },
+        "targetSpeed": 5.0
+    },
+    "vehicle": {"name": "olav"},
+    "simulation": {
+    	"endTime": 10.0
+    },
+    "visualization": {"enabled": true}
+}

@@ -1,0 +1,7 @@
+runs/
+*.h5
+*.out
+*.plot
+*.project
+*.pdf
+*.rst

@@ -1,0 +1,62 @@
+environment,
+    method_pointer = "METHOD_SAMPLING_DEFAULT"
+    results_output
+        results_output_file = 'case'
+        hdf5
+
+method,
+    id_method = "METHOD_SAMPLING_DEFAULT"
+    model_pointer = "MODEL_DYNO_OBSTACLE_AVOIDANCE_DEFAULT"
+    sampling
+        sample_type = lhs
+        samples = 100
+        seed = 1
+    output verbose
+
+
+model,
+    id_model = "MODEL_DYNO_OBSTACLE_AVOIDANCE_DEFAULT"
+    single
+        interface_pointer = "INTERFACE_DYNO_ROS_DEFAULT"
+
+variables,
+    id_variables = "VARIABLES_OBSTACLE_AVOIDANCE_DEFAULT"
+    uniform_uncertain = 1
+        descriptors  = 'speed'
+        lower_bounds = 0.0
+        upper_bounds = 12.0
+
+interface,
+    id_interface = 'INTERFACE_DYNO_ROS_DEFAULT'
+    analysis_drivers 'dynokota ros analysis_driver case.launch.py configuration.json parameters.yaml --launch-arguments bag_name:=case'
+        input_filter 'dynokota ros input_filter {PARAMETERS} --template-files configuration.tpl.json parameters.tpl.yaml'
+        output_filter 'dynokota ros output_filter {PARAMETERS} {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'include/case.launch.py'
+                           'include/configuration.tpl.json'
+                           'include/parameters.tpl.yaml'
+                           'include/default.rviz'
+                replace
+            verbatim
+            failure_capture
+                recover 0
+    asynchronous
+        evaluation_concurrency 1
+                               #24
+
+responses,
+    response_functions 1
+    descriptors 'velocity.linear.x:end'
+    no_gradients
+    no_hessians

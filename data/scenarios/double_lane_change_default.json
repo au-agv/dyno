@@ -1,0 +1,49 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy"
+        }
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 0.4,
+            "integralGain": 0.0,
+            "derivativeGain": 0.0
+        },
+        "steeringController": {
+            "proportionalGain": 1.5,
+            "integralGain": 0.0,
+            "derivativeGain": 0.0,
+            "lookaheadDistance": 1.0
+        }
+    },
+    "scenario": {
+        "template": "doubleLaneChange",
+        "targetSpeed": 28.0,
+        "accelerationLength": 200.0,
+        "vehicleWidth": 2.56,
+        "vehicleLength": 2.56,
+        "pathHeight": 0.5,
+        "leftTurn": false,
+        "haltOnFailure": false,
+        "terrain": {
+            "type": "rigid",
+            "frictionCoefficient": {
+                "left": 0.1,
+                "right": 0.9
+            },
+            "scm": {
+                "bekkerN": 1.6
+            }
+        },
+        "sideslope": 10.0
+    },
+    "simulation": {
+        "timeStep": 0.001,
+        "endTime": 200.0
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

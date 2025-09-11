@@ -1,0 +1,74 @@
+environment,
+    method_pointer = "METHOD_SAMPLING_DEFAULT"
+    results_output
+        results_output_file = 'results/grade_climbing_surrogate'
+        hdf5
+
+method,
+    id_method = "METHOD_SAMPLING_DEFAULT"
+    model_pointer = "MODEL_DYNO_GRADE_CLIMBING_SURROGATE"
+    sampling
+        sample_type = lhs
+        samples = 2500
+        seed = 1
+    output verbose
+
+method,
+    id_method = "METHOD_DACE_DEFAULT"
+    model_pointer = "MODEL_GRADE_CLIMBING_MULTIBODY"
+    sampling
+        samples = 100
+        seed = 1
+
+model,
+    id_model = "MODEL_GRADE_CLIMBING_MULTIBODY"
+    single
+        interface_pointer = "INTERFACE_DYNO_DEFAULT"
+
+model,
+    id_model = "MODEL_GRADE_CLIMBING_SURROGATE"
+    surrogate global
+        dace_method_pointer = "DACE"
+        mars
+          interpolation cubic
+          export_model
+            formats
+              text_archive
+
+
+variables,
+    id_variables = "VARIABLES_GRADE_CLIMBING_DEFAULT"
+    uniform_uncertain = 2
+        descriptors  = 'slope' 'friction_coefficient'
+        lower_bounds = 0.0     0.1
+        upper_bounds = 12.0    0.9
+
+interface,
+    id_interface = 'INTERFACE_DYNO_DEFAULT'
+    analysis_drivers 'dynokota analysis_driver doubleLaneChange case.json'
+        input_filter 'dynokota input_filter configuration.tpl.json --json-include {PARAMETERS} --output configuration.json'
+        output_filter 'dynokota output_filter {PARAMETERS} case.h5 {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'include/configuration.tpl.json'
+                replace
+            verbatim
+    asynchronous
+        evaluation_concurrency 1
+                               #24
+
+responses,
+    response_functions 1
+    descriptors 'velocity.linear.x:end'
+    no_gradients
+    no_hessians

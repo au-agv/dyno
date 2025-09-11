@@ -1,0 +1,18 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "scenario": {
+        "template": "straightLineBraking",
+        "targetSpeed": 7.0,
+        "minimumSpeed": 0.01,
+        "brakeEffort": 0.0,
+        "finalTime": 3.0
+    },
+    "simulation": {
+        "realtime": true
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

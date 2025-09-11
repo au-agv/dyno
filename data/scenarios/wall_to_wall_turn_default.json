@@ -1,0 +1,29 @@
+{
+    "vehicle": {
+        "name": "olav"
+    },
+    "driver": {
+        "speedController": {
+            "proportionalGain": 1.18,
+            "integralGain": 0.075,
+            "derivativeGain": 0.0
+        },
+        "steeringController": {
+            "proportionalGain": 0.05,
+            "integralGain": 0.001,
+            "derivativeGain": 0.0001,
+            "lookaheadDistance": 5.0
+        }
+    },
+    "scenario": {
+        "template": "wallToWallTurn",
+        "targetSpeed": 1.0,
+        "targetSteering": 1.0,
+        "headingTolerance": 0.01,
+        "triggerPosition": 10.0,
+        "leftTurn": false
+    },
+    "visualization": {
+        "enabled": true
+    }
+}

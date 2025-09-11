@@ -1,0 +1,27 @@
+{
+    "output": {
+        "triggerPosition": -10.0
+    },
+    "scenario": {
+        "accelerationLength": 100.0,
+        "brakeEffort": 1.0,
+        "brakeStart": 0.0,
+        "targetSpeed": 25.0,
+        "terrain": {
+            "friction": {
+                "left": 0.1,
+                "right": 0.6
+            }
+        }
+    },
+    "terrain": {
+        "type": "rigid"
+    },
+    "vehicle": {
+        "name": "olav"
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "vsg"
+    }
+}

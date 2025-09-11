@@ -1,0 +1,25 @@
+services:
+  dyno_ros:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              driver: nvidia
+              device_ids: [ nvidia.com/gpu=all ]
+    environment:
+      - DOCKER_ROS_BUILD=true
+      - DOCKER_ROS_EXEC=node
+      - DOCKER_ROS_PACKAGE=dyno_simulation
+      - DOCKER_ROS_NODE=dyno_simulation_native_simulator_interface_node
+      - DISPLAY=${DISPLAY}
+    image: ghcr.io/aarhus-robotics/dyno:ros-stable
+    runtime: nvidia
+    security_opt:
+      - seccomp:unconfined
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/home/dyno
+      - ../../../ros:/home/robot/ROS/src
+      - /tmp/.X11-unix:/tmp/.X11-unix

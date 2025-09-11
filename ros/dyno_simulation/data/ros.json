@@ -1,0 +1,81 @@
+{
+    "vehicle": {
+        "name": "olav",
+        "system": {
+            "tires": "tmeasy"
+        }
+    },
+    "terrain": {
+        "type": "rigid",
+        "rigid": {
+            "patches": [
+                {
+                    "material": {
+                        "frictionCoefficient": 0.85
+                    },
+                    "size": {
+                        "length": 200.0,
+                        "width": 200.0
+                    },
+                    "visualization": {
+                        "texture": {
+                            "path": "textures/terrain/asphalt.jpg"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "obstacles": [
+        {
+            "type": "cylinder",
+            "radius": 1.1,
+            "height": 2.0,
+            "path": "/objects/barrier/meshes/barrier.obj",
+            "x": 10.0,
+            "y": 10.0,
+            "z": 0.0,
+            "collision": false
+        },
+        {
+            "type": "cylinder",
+            "radius": 1.1,
+            "height": 2.0,
+            "path": "/objects/barrier/meshes/barrier.obj",
+            "x": 30.0,
+            "y": 10.0,
+            "z": 0.0,
+            "collision": false
+        },
+        {
+            "type": "cylinder",
+            "radius": 1.1,
+            "height": 2.0,
+            "path": "/objects/barrier/meshes/barrier.obj",
+            "x": 30.0,
+            "y": 15.0,
+            "z": 0.0,
+            "collision": false
+        },
+        {
+            "type": "cylinder",
+            "radius": 1.1,
+            "height": 2.0,
+            "path": "/objects/barrier/meshes/barrier.obj",
+            "x": 20.0,
+            "y": 15.0,
+            "z": 0.0,
+            "collision": false
+        }
+    ],
+    "simulation": {
+        "endTime": 1000.0
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "vsg",
+        "gui": {
+            "enabled": true
+        }
+    }
+}

@@ -1,0 +1,49 @@
+"/**":
+  ros__parameters:
+    use_sim_time: true
+    options: {workspace}/configuration.json
+    rates:
+      pointcloud: 10.0
+    sensors:
+      camera: false
+      lidar: false
+# PLANNER
+    planner:
+      model:
+        collision_radius: 0.0
+        max_steering_angle: 33.0
+        offset:
+          x: 0.92
+          y: -0.05
+      rate: 10.0
+      controls:
+        rate: 100.0
+        lookahead_time: 0.5
+      objective:
+        weights:
+          previous: 0.1
+          speed: 0.1
+          obstacles: 2.2
+          goal: 18.5
+          controls:
+            acceleration: 1.0
+            steering_rate: 1.0
+          heading: 0.05
+        obstacles:
+          use_hard_constraints: false
+      use_dyno_obstacles: true
+      speed:
+        min: 2.0
+        target: 5.0
+        max: 8.0
+      integrator:
+        steps: 50
+        step_size: 0.1
+      deceleration:
+        max: 0.5
+      acceleration:
+        max: 0.1
+        steps: 10
+      steering_rate:
+        max: 0.01
+        steps: 100

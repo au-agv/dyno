@@ -1,0 +1,31 @@
+{
+    "log": {"level": "debug"},
+    "vehicle": {"name": "olav"},
+    "scenario": {
+        "obstacles": {
+            "enabled": true,
+            "mode": "field",
+            "minimumDistance": 5.0,
+            "gatesWidth": 10.0,
+            "adjustHeight": true,
+            "positions": [ [500.0, 0.0, 0.0], [250000.0, 0.0, 0.0] ],
+            "sizes": [ [1.0, 1.0, 1.0], [1.0, 1.0, 1.0] ]
+        },
+        "path": {
+            "waypoints": [
+                [  0.01, 0, 0],
+                [  0.10, 0, 0],
+                [ 10.10, 0, 0],
+                [ 15.10, 0, 0],
+                [100.10, 0, 0]
+            ],
+            "waypointsIntegrationStep": 0.01
+        }
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "vsg",
+        "gui": {"enabled": false},
+        "backgroundColor": [255.0, 255.0, 255.0]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "scenario": {
+        "steering": {
+            "amplitude": 1.0,
+            "frequency": 0.2
+        },
+        "targetSpeed": 5.0,
+        "terrain": {
+            "rigid": {
+                "frictionCoefficient": 0.4
+            }
+        }
+    },
+    "simulation": {
+        "endTime": 20.0
+    },
+    "vehicle": {
+        "name": "olav"
+    },
+    "visualization": {
+        "enabled": true,
+        "engine": "irrlicht"
+    }
+}

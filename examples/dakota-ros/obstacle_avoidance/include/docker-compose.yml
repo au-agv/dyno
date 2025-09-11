@@ -1,0 +1,99 @@
+networks:
+  ros:
+    name: mdwa
+
+services:
+  simulator:
+    cap_add:
+      - NET_ADMIN
+    container_name: mdwa_simulator
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
+              driver: nvidia
+              device_ids: [ nvidia.com/gpu=all ]
+    environment:
+      - DISPLAY=${DISPLAY}
+      - DOCKER_ROS_PARAMETERS_FILE=/home/robot/ROS/config/parameters/parameters.yaml
+      #- DOCKER_ROS_REMAPPINGS=points:=/lidar
+    image: ghcr.io/aarhus-robotics/dyno:ros
+    networks: [ ros ]
+    runtime: nvidia
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./include/options.json:/home/robot/ROS/data/options.json:ro
+      - ./include/parameters.yaml:/home/robot/ROS/config/parameters/parameters.yaml:ro
+
+  planner:
+    cap_add:
+      - NET_ADMIN
+    container_name: mdwa_planner
+    depends_on: [ simulator ]
+    environment:
+      #- DOCKER_ROS_DEBUG=true
+      - DOCKER_ROS_ACTION=run
+      - DOCKER_ROS_PACKAGE=navi_planning
+      - DOCKER_ROS_EXECUTABLE=navi_planning_dwa_planner_node
+      - DOCKER_ROS_PARAMETERS_FILE=/home/robot/ROS/config/parameters/parameters.yaml
+      - DOCKER_ROS_REMAPPINGS=odometry:=sensors/navigation/odometry,goal:=navigation/target,obstacles:=scenario/obstacles,steering_angle:=sensors/steering/angle,drive:=controls/drive
+    image: ghcr.io/aarhus-robotics/navi:runtime
+    networks: [ ros ]
+    volumes:
+      - ./include/parameters.yaml:/home/robot/ROS/config/parameters/parameters.yaml:ro
+    
+  recorder:
+    cap_add:
+      - NET_ADMIN
+    container_name: mdwa_recorder
+    environment:
+      - DOCKER_ROS_BUILD=true
+      - DOCKER_ROS_ACTION=record
+      - DOCKER_ROS_BAG_NAME=${DOCKER_ROS_BAG_NAME}
+    image: ghcr.io/aarhus-robotics/dyno:ros
+    networks: [ ros ]
+    stop_grace_period: 1m30s
+    stop_signal: SIGINT
+    volumes:
+      - ./bags:/home/robot/bags
+      - ./interfaces:/home/robot/ROS/src/interfaces:ro
+      - install:/home/robot/ROS/install
+
+  #visualizer:
+  #  cap_add:
+  #    - NET_ADMIN
+  #  container_name: mdwa_visualizer
+  #  deploy:
+  #    resources:
+  #      reservations:
+  #        devices:
+  #          - capabilities: [ gpu ]
+  #            driver: nvidia
+  #            device_ids: [ nvidia.com/gpu=all ]
+  #  depends_on: [ simulator ]
+  #  environment:
+  #    - DISPLAY=${DISPLAY}
+  #    - DOCKER_ROS_PACKAGE=rviz2
+  #    - DOCKER_ROS_EXECUTABLE=rviz2
+  #  image: ghcr.io/aarhus-robotics/dyno:ros
+  #  networks: [ ros ]
+  #  runtime: nvidia
+  #  volumes:
+  #    - /tmp/.X11-unix:/tmp/.X11-unix
+  #    - ./include/default.rviz:/home/robot/.rviz2/default.rviz:rw
+
+  #shell:
+  #  cap_add:
+  #    - NET_ADMIN
+  #  container_name: mdwa_shell
+  #  environment:
+  #    - DOCKER_ROS_ACTION=shell
+  #  image: ghcr.io/aarhus-robotics/dyno:ros
+  #  networks: [ ros ]
+  #  stdin_open: true
+  #  tty: true
+
+volumes:
+  install:
+    name: navi_install_cache

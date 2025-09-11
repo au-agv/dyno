@@ -1,0 +1,56 @@
+environment,
+    method_pointer = "METHOD_MULTIDIM_PARAMETER_STUDY_DEFAULT"
+    results_output
+        results_output_file 'results/grade_climbing'
+        hdf5
+
+method,
+    id_method = "METHOD_MULTIDIM_PARAMETER_STUDY_DEFAULT"
+    model_pointer = "MODEL_DYNO_GRADE_CLIMBING_DEFAULT"
+    multidim_parameter_study
+        #descriptors slope friction_coefficient
+        partitions   20    8
+
+model,
+    id_model = "MODEL_DYNO_GRADE_CLIMBING_DEFAULT"
+    single
+        interface_pointer = 'INTERFACE_DYNO_DEFAULT'
+
+variables,
+    id_variables = "VARIABLES_GRADE_CLIMBING_DEFAULT"
+    continuous_design = 2
+        descriptors  = 'grade_percentage' 'friction_coefficient'
+        lower_bounds = 0.0                0.1
+        upper_bound  = 50.1               0.91
+
+interface,
+    id_interface = 'INTERFACE_DYNO_DEFAULT'
+    analysis_drivers 'dynokota analysis_driver straightLineAcceleration configuration.json'
+        input_filter 'dynokota input_filter configuration.tpl.json {PARAMETERS}'
+        output_filter 'dynokota output_filter {PARAMETERS} {RESULTS}'
+        fork
+            parameters_file 'parameters.json'
+            results_file 'results.json'
+            parameters_format
+                json
+            results_format
+                json
+            file_save
+            work_directory
+                named 'runs/run'
+                directory_tag
+                directory_save
+                link_files 'include/configuration.tpl.json'
+                replace
+            verbatim
+            failure_capture
+                recover 0
+    asynchronous
+        evaluation_concurrency #1
+                               24
+
+responses,
+    response_functions 1
+    descriptors 'velocity.linear.x:end'
+    no_gradients
+    no_hessians
