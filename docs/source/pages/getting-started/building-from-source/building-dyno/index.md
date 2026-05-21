@@ -5,7 +5,7 @@
 Clone the DYNO repository and create a build folder inside of it
 
 ```shell
-git clone https://github.com/aarhus-robotics/dyno.git dyno
+git clone https://github.com/au-agv/dyno.git dyno
 mkdir -p dyno/build && cd dyno/build
 ```
 

@@ -1,10 +1,10 @@
 ARG TARGET=cpu
 
-FROM ghcr.io/aarhus-robotics/dyno:devel-stable AS cpu
+FROM ghcr.io/au-agv/dyno:devel-stable AS cpu
 
 LABEL org.opencontainers.image.title="DYNO (runtime)"
 
-FROM ghcr.io/aarhus-robotics/dyno:devel-stable-cuda AS cuda
+FROM ghcr.io/au-agv/dyno:devel-stable-cuda AS cuda
 
 LABEL org.opencontainers.image.title="DYNO (runtime-cuda)"
 
@@ -20,7 +20,7 @@ USER root
 # If using the GitHub repository as origin for the source code, use this ADD
 # command to invalidate the cache when new commits are available.
 #
-# ADD https://api.github.com/repos/aarhus-robotics/dyno/git/refs/heads/main version.json
+# ADD https://api.github.com/repos/au-agv/dyno/git/refs/heads/main version.json
 # ---------------------------------------------------------------------------- #
 
 RUN mkdir -p ${DYNO_PATH}/{cmake,data,include,src,tests}
@@ -44,10 +44,10 @@ USER robot
 # Add container labels                                                        #
 ###############################################################################
 
-LABEL org.opencontainers.image.authors="Dario Sirangelo (dsi@aarhusrobotics.com)"
-LABEL org.opencontainers.image.url=https://github.com/aarhus-robotics/dyno
-LABEL org.opencontainers.image.documentation=https://docs.aarhusrobotics.com/dyno
-LABEL org.opencontainers.image.source=https://github.com/aarhus-robotics/dyno/tree/main/docker/build/standalone/runtime
+LABEL org.opencontainers.image.authors="Dario Sirangelo (dev@dariosirangelo.me)"
+LABEL org.opencontainers.image.url=https://github.com/au-agv/dyno
+LABEL org.opencontainers.image.documentation=https://au-agv.github.io/dyno
+LABEL org.opencontainers.image.source=https://github.com/au-agv/dyno/tree/main/docker/build/standalone/runtime
 LABEL org.opencontainers.image.version=main
 LABEL org.opencontainers.image.licenses=MIT
 LABEL org.opencontainers.image.description="Ground vehicle dynamics validation toolkit "

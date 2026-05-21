@@ -10,7 +10,7 @@
 #  MIT License
 #
 #  DYNO: Ground Vehicle Dynamics Validation Toolkit
-#  Copyright (c) 2024 Dario Sirangelo (dsi@aarhusrobotics.com).
+#  Copyright (c) 2024 Dario Sirangelo (dev@dariosirangelo.me).
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to
@@ -212,7 +212,7 @@ class UniBagDataProcessor(BagDataProcessor):
         )
 
         with open(
-            "/home/taskbjorn/repositories/github.com/aarhus-robotics/dyno/examples/postprocessor/metadata.yaml",
+            "/home/taskbjorn/repositories/github.com/au-agv/dyno/examples/postprocessor/metadata.yaml",
             "r",
         ) as file:
             self.serialize_dict_to_group(

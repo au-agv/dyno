@@ -16,12 +16,12 @@ services:
               device_ids: [ nvidia.com/gpu=all ]
     environment:
       - DISPLAY=${DISPLAY}
-    image: ghcr.io/aarhus-robotics/dyno:ros-devel
+    image: ghcr.io/au-agv/dyno:ros-devel
     runtime: nvidia
     stdin_open: true
     tty: true
     volumes:
       - ../../:/home/robot/workspace
       # (Optional) Explicit ROS workspace mount
-      #- ../../ros:/home/robot/ROS/src/aarhus-robotics
+      #- ../../ros:/home/robot/ROS/src/au-agv
       - /tmp/.X11-unix:/tmp/.X11-unix

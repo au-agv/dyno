@@ -6,4 +6,4 @@ cd "$(dirname "$0")"
 
 rsync -av --stats --progress \
     ../build/html/ \
-    robot@docs.aarhusrobotics.com:/home/robot/docs/dyno/
+    robot@au-agv.github.io:/home/robot/docs/dyno/

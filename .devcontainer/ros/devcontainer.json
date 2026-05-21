@@ -31,5 +31,5 @@
     "service": "dyno",
     "workspaceFolder": "/home/robot/workspace"
     // (Optional) Explicit ROS workspace mount
-    //"workspaceFolder": "/home/robot/ROS/src/aarhus-robotics"
+    //"workspaceFolder": "/home/robot/ROS/src/au-agv"
 }

@@ -114,7 +114,7 @@ If you are interested in running Dakota alongside DYNO ROS, you have two choices
 1. Install Dakota on the host and configure it to spawn a Docker container with
    DYNO ROS (challenging and fragile).
 2. Create a specialized Docker image from
-   `ghcr.io/aarhus-robotics/dyno:ros-runtime`.
+   `ghcr.io/au-agv/dyno:ros-runtime`.
 
 In the first case, you will need some special logic to spawn a Rosbag logger and
 capture end of a simulation (e.g. via the Docker Compose argument

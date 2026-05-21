@@ -18,7 +18,7 @@ services:
       - DISPLAY=${DISPLAY}
       - DOCKER_ROS_PARAMETERS_FILE=/home/robot/ROS/config/parameters/parameters.yaml
       #- DOCKER_ROS_REMAPPINGS=points:=/lidar
-    image: ghcr.io/aarhus-robotics/dyno:ros
+    image: ghcr.io/au-agv/dyno:ros
     networks: [ ros ]
     runtime: nvidia
     volumes:
@@ -38,7 +38,7 @@ services:
       - DOCKER_ROS_EXECUTABLE=navi_planning_dwa_planner_node
       - DOCKER_ROS_PARAMETERS_FILE=/home/robot/ROS/config/parameters/parameters.yaml
       - DOCKER_ROS_REMAPPINGS=odometry:=sensors/navigation/odometry,goal:=navigation/target,obstacles:=scenario/obstacles,steering_angle:=sensors/steering/angle,drive:=controls/drive
-    image: ghcr.io/aarhus-robotics/navi:runtime
+    image: ghcr.io/au-agv/navi:runtime
     networks: [ ros ]
     volumes:
       - ./include/parameters.yaml:/home/robot/ROS/config/parameters/parameters.yaml:ro
@@ -51,7 +51,7 @@ services:
       - DOCKER_ROS_BUILD=true
       - DOCKER_ROS_ACTION=record
       - DOCKER_ROS_BAG_NAME=${DOCKER_ROS_BAG_NAME}
-    image: ghcr.io/aarhus-robotics/dyno:ros
+    image: ghcr.io/au-agv/dyno:ros
     networks: [ ros ]
     stop_grace_period: 1m30s
     stop_signal: SIGINT
@@ -76,7 +76,7 @@ services:
   #    - DISPLAY=${DISPLAY}
   #    - DOCKER_ROS_PACKAGE=rviz2
   #    - DOCKER_ROS_EXECUTABLE=rviz2
-  #  image: ghcr.io/aarhus-robotics/dyno:ros
+  #  image: ghcr.io/au-agv/dyno:ros
   #  networks: [ ros ]
   #  runtime: nvidia
   #  volumes:
@@ -89,7 +89,7 @@ services:
   #  container_name: mdwa_shell
   #  environment:
   #    - DOCKER_ROS_ACTION=shell
-  #  image: ghcr.io/aarhus-robotics/dyno:ros
+  #  image: ghcr.io/au-agv/dyno:ros
   #  networks: [ ros ]
   #  stdin_open: true
   #  tty: true

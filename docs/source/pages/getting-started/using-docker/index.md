@@ -38,7 +38,7 @@ images inherit from the `cuda` image, as they require sensor simulation.
 To pull a specific Docker image, use the following command:
 
 ```shell
-docker pull gchr.io/aarhus-robotics/dyno:{tag}}
+docker pull gchr.io/au-agv/dyno:{tag}}
 ```
 
 Below is a list of the available tag and a brief description of each.
@@ -63,7 +63,7 @@ your application.
 You can spawn a new interactive shell with `dyno` in a container by running:
 
 ```shell
-docker run -it ghcr.io/aarhus-robotics/dyno:runtime
+docker run -it ghcr.io/au-agv/dyno:runtime
 ```
 
 You may then use the command `dyno` to run your scenario. For example, to

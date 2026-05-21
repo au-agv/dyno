@@ -2,7 +2,7 @@
 # Submission text
 
 ---
-https://github.com/aarhus-robotics/dyno.git
+https://github.com/au-agv/dyno.git
 ---
 
 No portion of this submitted work has been published or submitted to another

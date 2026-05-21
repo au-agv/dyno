@@ -1,4 +1,4 @@
-FROM ghcr.io/aarhus-robotics/dyno:ros-devel
+FROM ghcr.io/au-agv/dyno:ros-devel
 
 ARG ROS_DISTRIBUTION=humble
 ARG BUILD_TYPE=RelWithDebInfo
@@ -14,7 +14,7 @@ COPY --chown=${USER}:${USER} cmake ${DYNO_PATH}/cmake
 COPY --chown=${USER}:${USER} data ${DYNO_PATH}/data
 COPY --chown=${USER}:${USER} include ${DYNO_PATH}/include
 COPY --chown=${USER}:${USER} pydyno ${DYNO_PATH}/pydyno
-COPY --chown=${USER}:${USER} ros /home/${USER}/ROS/src/aarhus-robotics/dyno/
+COPY --chown=${USER}:${USER} ros /home/${USER}/ROS/src/au-agv/dyno/
 COPY --chown=${USER}:${USER} src ${DYNO_PATH}/src
 COPY --chown=${USER}:${USER} tests ${DYNO_PATH}/tests
 
@@ -56,10 +56,10 @@ ENV DOCKER_ROS_EXECUTABLE=dyno_simulation_native_simulator_interface_node
 # Add container labels                                                        #
 ###############################################################################
 
-LABEL org.opencontainers.image.authors="Dario Sirangelo (dsi@aarhusrobotics.com)"
-LABEL org.opencontainers.image.url=https://github.com/aarhus-robotics/dyno
-LABEL org.opencontainers.image.documentation=https://docs.aarhusrobotics.com/dyno
-LABEL org.opencontainers.image.source=https://github.com/aarhus-robotics/dyno/tree/main/docker/build/ros/runtime
+LABEL org.opencontainers.image.authors="Dario Sirangelo (dev@dariosirangelo.me)"
+LABEL org.opencontainers.image.url=https://github.com/au-agv/dyno
+LABEL org.opencontainers.image.documentation=https://au-agv.github.io/dyno
+LABEL org.opencontainers.image.source=https://github.com/au-agv/dyno/tree/main/docker/build/ros/runtime
 LABEL org.opencontainers.image.version=main
 LABEL org.opencontainers.image.licenses=MIT
 LABEL org.opencontainers.image.title="DYNO (ros-runtime)"

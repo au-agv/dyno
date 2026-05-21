@@ -3,7 +3,7 @@ services:
     container_name: dyno_devcontainer
     environment:
       - DISPLAY=${DISPLAY}
-    image: ghcr.io/aarhus-robotics/dyno:devel
+    image: ghcr.io/au-agv/dyno:devel
     stdin_open: true
     tty: true
     volumes:

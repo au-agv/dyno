@@ -13,7 +13,7 @@ services:
       - DOCKER_ROS_PACKAGE=dyno_simulation
       - DOCKER_ROS_NODE=dyno_simulation_native_simulator_interface_node
       - DISPLAY=${DISPLAY}
-    image: ghcr.io/aarhus-robotics/dyno:ros-stable
+    image: ghcr.io/au-agv/dyno:ros-stable
     runtime: nvidia
     security_opt:
       - seccomp:unconfined

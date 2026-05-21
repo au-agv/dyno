@@ -1,4 +1,4 @@
-FROM ghcr.io/aarhus-robotics/dyno:runtime-stable-cuda
+FROM ghcr.io/au-agv/dyno:runtime-stable-cuda
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LOCALE=en_US
@@ -63,10 +63,10 @@ VOLUME ["/home/robot/ROS/build", "/home/robot/ROS/install"]
 # Add container labels                                                        #
 ###############################################################################
 
-LABEL org.opencontainers.image.authors="Dario Sirangelo (dsi@aarhusrobotics.com)"
-LABEL org.opencontainers.image.url=https://github.com/aarhus-robotics/dyno
-LABEL org.opencontainers.image.documentation=https://docs.aarhusrobotics.com/dyno
-LABEL org.opencontainers.image.source=https://github.com/aarhus-robotics/dyno/tree/main/docker/build/ros/devel
+LABEL org.opencontainers.image.authors="Dario Sirangelo (dev@dariosirangelo.me)"
+LABEL org.opencontainers.image.url=https://github.com/au-agv/dyno
+LABEL org.opencontainers.image.documentation=https://au-agv.github.io/dyno
+LABEL org.opencontainers.image.source=https://github.com/au-agv/dyno/tree/main/docker/build/ros/devel
 LABEL org.opencontainers.image.version=main
 LABEL org.opencontainers.image.licenses=MIT
 LABEL org.opencontainers.image.title="DYNO (ros-devel)"

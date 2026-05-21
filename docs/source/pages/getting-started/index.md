@@ -24,7 +24,7 @@ quicky run DYNO on your machine, you can run the following Docker command to get
 the latest runtime:
 
 ```shell
-docker run -it ghcr.io/aarhus-robotics/dyno:runtime
+docker run -it ghcr.io/au-agv/dyno:runtime
 ```
 
 Once inside the container, launch a simple simulation using default options with

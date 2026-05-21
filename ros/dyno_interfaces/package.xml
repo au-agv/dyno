@@ -4,7 +4,7 @@
   <name>dyno_interfaces</name>
   <version>1.0.0</version>
   <description>Interfaces for the DYNO vehicle dynamics testbed</description>
-  <maintainer email="dsi@aarhusrobotics.com">Dario Sirangelo</maintainer>
+  <maintainer email="dev@dariosirangelo.me">Dario Sirangelo</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

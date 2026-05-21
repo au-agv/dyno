@@ -56,7 +56,7 @@ To get started using DYNO, you can:
 ## Accessing the documentation
 
 You can learn more about how to deploy and use DYNO at
-[docs.aarhusrobotics.com/dyno](https://docs.aarhusrobotics.com/dyno).
+[au-agv.github.io/dyno](https://au-agv.github.io/dyno).
 
 # Contributing
 
@@ -65,7 +65,7 @@ research group behind it. If you would like to add a new feature, we invite you
 to follow the [contribution guidelines](CONTRIBUTING.md) before opening a new
 pull request. We are also open to hearing your feedback, bug reports and feature
 requests through [GitHub
-issues](https://github.com/aarhus-robotics/dyno/issues).
+issues](https://github.com/au-agv/dyno/issues).
 
 # Repository structure
 

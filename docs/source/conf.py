@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path("../../pydyno", "src").resolve()))
 
 # Sphinx configuration
 project = "DYNO"
-copyright = "2024, Aarhus Robotics"
+copyright = "2024, Aarhus University Autonomous Ground Vehicles"
 author = "Dario Sirangelo"
 release = "1.0.0"
 extensions = [

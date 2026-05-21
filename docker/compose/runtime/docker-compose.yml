@@ -10,7 +10,7 @@ services:
               device_ids: [ nvidia.com/gpu=all ]
     environment:
       - DISPLAY=${DISPLAY}
-    image: aarhus-robotics/dyno
+    image: au-agv/dyno
     runtime: nvidia
     stdin_open: true
     tty: true

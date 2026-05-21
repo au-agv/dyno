@@ -21,7 +21,7 @@ build-backend = "poetry.core.masonry.api"
 name = "pydyno"
 version = "1.0.0"
 description = "Ground Vehicle Dynamics Validation Toolkit"
-authors = [{name = "Dario Sirangelo", email = "dsi@aarhusrobotics.com"}]
+authors = [{name = "Dario Sirangelo", email = "dev@dariosirangelo.me"}]
 readme = "README.md"
 include = [{ path = "pydyno/data", format = ["sdist", "wheel"]}]
 

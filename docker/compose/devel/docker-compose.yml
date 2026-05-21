@@ -12,7 +12,7 @@ services:
       #- DISPLAY=host.docker.internal:0.0
       - MESA_LOADER_DRIVER_OVERRIDE=i965
       - LIBGL_ALWAYS_SOFTWARE=1
-    image: aarhus-robotics/dyno:latest
+    image: au-agv/dyno:latest
     ports: [ 5555 ]
     security_opt:
       - seccomp:unconfined

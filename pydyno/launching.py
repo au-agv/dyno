@@ -10,7 +10,7 @@
 #  MIT License
 #
 #  DYNO: Ground Vehicle Dynamics Validation Toolkit
-#  Copyright (c) 2024 Dario Sirangelo (dsi@aarhusrobotics.com).
+#  Copyright (c) 2024 Dario Sirangelo (dev@dariosirangelo.me).
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to
@@ -63,7 +63,7 @@ class LauncherDyno(Launcher):
 
         self._parser = argparse.ArgumentParser(
             description="DYNO process launcher for standalone usage.",
-            epilog="Copyright Aarhus Robotics (c) 2024",
+            epilog="Copyright Aarhus University Autonomous Ground Vehicles (c) 2024",
         )
 
         self._parser.add_argument(
@@ -125,7 +125,7 @@ class LauncherDakota(Launcher):
                 "DYNO process launcher and supervisor for case studies using"
                 " Sandia National Laboratories Dakota."
             ),
-            epilog="Copyright Aarhus Robotics (c) 2024",
+            epilog="Copyright Aarhus University Autonomous Ground Vehicles (c) 2024",
         )
         self._create_subparsers()
         self._create_subparser_analysis_driver()
